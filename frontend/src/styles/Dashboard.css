@@ -1,0 +1,45 @@
+/* dashboard.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f5f3fb;
+}
+.dashboard-page {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+
+
+/* MAIN CONTENT */
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .middle-grid,
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,285 @@
+.users-page {
+  padding: 20px;
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* TABLE */
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.users-table th,
+.users-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.users-table th {
+  background: #f5f3fb;
+}
+
+/* USER CELL */
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #6c3ef4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ROLE BADGE */
+.role {
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.role.admin {
+  background: #ffe5e5;
+  color: red;
+}
+
+.role.user {
+  background: #e6f7ec;
+  color: green;
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon-button:focus-visible {
+  outline: 2px solid #6c3ef4;
+  outline-offset: 2px;
+}
+
+.icon.view {
+  color: #3498db;
+}
+
+.icon.edit {
+  color: #f39c12;
+}
+
+.icon.delete {
+  color: #e74c3c;
+}
+/* OVERLAY */
+.add-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* MODAL CARD */
+.add-modal {
+  width: 100%;
+  max-width: 450px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  padding: 28px;
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+
+  animation: modalFade 0.25s ease;
+}
+
+/* TITLE */
+.add-modal h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+
+  margin-bottom: 22px;
+}
+
+/* FORM */
+.add-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* INPUTS */
+.add-modal input[type="text"],
+.add-modal input[type="email"],
+.add-modal input[type="password"] {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  font-size: 14px;
+  color: #333;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+/* INPUT FOCUS */
+.add-modal input:focus {
+  border-color: #6c3ef4;
+
+  box-shadow: 0 0 0 3px rgba(108, 62, 244, 0.15);
+}
+
+/* CHECKBOX LABEL */
+.add-modal label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #444;
+}
+
+/* CHECKBOX */
+.add-modal input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #6c3ef4;
+}
+
+/* BUTTON SECTION */
+.add-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+.add-modal-actions button {
+  border: none;
+
+  padding: 11px 18px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+/* CANCEL BUTTON */
+.add-modal-actions button:first-child {
+  background: #f1f1f1;
+  color: #444;
+}
+
+/* CREATE BUTTON */
+.add-modal-actions button:last-child {
+  background: linear-gradient(90deg, #6c3ef4, #9b6bff);
+  color: white;
+}
+
+/* BUTTON HOVER */
+.add-modal-actions button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* ANIMATION */
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .add-modal {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .add-modal-actions {
+    flex-direction: column;
+  }
+
+  .add-modal-actions button {
+    width: 100%;
+  }
+}
+
+.delete-modal p {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.delete-confirm-btn {
+  background: #e74c3c !important;
+  color: white;
+}
+
+.delete-confirm-btn:hover {
+  background: #c0392b !important;
+}

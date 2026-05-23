@@ -1,0 +1,148 @@
+/* SIDEBAR */
+
+.sidebar {
+  width: 260px;
+  background: linear-gradient(to bottom, #4b1979, #2d0d50);
+  color: white;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.logo-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.logo-section h2 {
+  font-size: 24px;
+  color: white;
+}
+
+.logo-section p {
+  font-size: 13px;
+  opacity: 0.9;
+ 
+}
+
+.menu-group {
+  margin-bottom: 28px;
+}
+
+.menu-title {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 14px;
+   text-align: left;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+   text-decoration: none;   /* remove underline */
+  color: white; 
+}
+
+.menu-item:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.menu-item.active {
+  background: linear-gradient(to right, #b65cff, #d28cff);
+}
+
+.logout {
+   display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+   text-decoration: none;   /* remove underline */
+  color: white; 
+}
+
+.logout:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SIDEBAR TOGGLE */
+
+.sidebar {
+  transition: 0.3s ease;
+}
+
+.sidebar.hide {
+  margin-left: -260px;
+}
+
+.sidebar.show {
+  margin-left: 0;
+}
+.logo-img {
+  width: 48px;
+  height: 48px;
+  /* filter: brightness(1.4); */
+}
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 1000;
+    width: 260px;
+    height: 100vh;
+  }
+
+ .sidebar.hide {
+  width: 0;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}

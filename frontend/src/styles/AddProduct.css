@@ -1,0 +1,229 @@
+/* ========================================= */
+/* Product Modal */
+/* ========================================= */
+
+.product-modal {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* ========================================= */
+/* Form */
+/* ========================================= */
+
+.product-form {
+  width: min(95vw, 700px);
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: white;
+  border-radius: 24px;
+
+  padding: clamp(18px, 2vw, 28px);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  animation: modalShow 0.25s ease;
+}
+
+/* Hide scrollbar but keep scroll */
+.product-form::-webkit-scrollbar {
+  width: 6px;
+}
+
+.product-form::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 10px;
+}
+
+/* ========================================= */
+/* Title */
+/* ========================================= */
+
+.product-form h3 {
+  font-size: clamp(20px, 2vw, 28px);
+  color: #1e1b4b;
+  margin-bottom: 6px;
+}
+
+/* ========================================= */
+/* Inputs */
+/* ========================================= */
+
+.product-form input,
+.product-form textarea,
+.product-form select {
+  width: 100%;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  padding: 12px 14px;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.product-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.product-form input:focus,
+.product-form textarea:focus,
+.product-form select:focus {
+  outline: none;
+  border-color: #7c3aed;
+
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+}
+
+/* ========================================= */
+/* Rows */
+/* ========================================= */
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row > * {
+  flex: 1;
+}
+
+/* ========================================= */
+/* Buttons */
+/* ========================================= */
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  height: 42px;
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.form-buttons button[type="submit"] {
+  background: linear-gradient(to right, #6d28d9, #9333ea);
+  color: white;
+}
+
+.form-buttons button[type="button"] {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #6c63ff;
+}
+
+.delete-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+}
+
+/* ========================================= */
+/* Animation */
+/* ========================================= */
+
+@keyframes modalShow {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========================================= */
+/* Responsive */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .product-form {
+    width: 100%;
+    max-height: 95vh;
+
+    border-radius: 18px;
+    padding: 18px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+}

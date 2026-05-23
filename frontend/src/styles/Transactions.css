@@ -1,0 +1,91 @@
+/* TRANSACTIONS CONTAINER */
+.transactions-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADER */
+.transactions-header {
+  margin-bottom: 16px;
+}
+
+.transactions-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* TABLE WRAPPER */
+.transactions-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* TABLE */
+.transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* TABLE HEAD */
+.transactions-table th {
+  text-align: left;
+  padding: 12px;
+  font-size: 13px;
+  color: #666;
+  background: #f5f3fb;
+  font-weight: 600;
+}
+
+/* TABLE ROW */
+.transactions-table td {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+/* HOVER EFFECT */
+.transactions-table tr:hover {
+  background: #faf9ff;
+}
+
+/* ITEM LIST INSIDE TABLE */
+.item-row {
+  margin-bottom: 6px;
+}
+
+.item-row strong {
+  color: #333;
+}
+
+.item-row small {
+  color: #888;
+  font-size: 12px;
+}
+
+/* BADGE (CATEGORY) */
+.badge {
+  display: inline-block;
+  background: #e9e5ff;
+  color: #6c3ef4;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-top: 2px;
+}
+
+/* DATE */
+.date {
+  font-size: 13px;
+  color: #777;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}

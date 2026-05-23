@@ -1,0 +1,240 @@
+.product-page {
+  padding: 20px;
+  background: #f5f6fa;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+} */
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  color: #000;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.edit-btn {
+  background: #f39c12;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* MAIN CARD */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* IMAGE */
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* DETAILS */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* TITLE */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title-row h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #333;
+}
+
+/* STOCK STATUS (same style system as your table badges) */
+.stock-badge {
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.stock-badge.low {
+  color: red;
+  background: #ffe5e5;
+}
+
+.stock-badge.high {
+  color: green;
+  background: #e6f7ec;
+}
+
+/* PRICE */
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #9333ea; /* matches your purple theme */
+}
+
+/* INFO GRID */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.label {
+  font-size: 12px;
+  color: #888;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* DESCRIPTION */
+.description {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.description .text {
+  color: #444;
+  line-height: 1.6;
+}
+@media (max-width: 1024px) {
+  .card {
+    gap: 20px;
+  }
+
+  .title-row h1 {
+    font-size: 22px;
+  }
+
+  .image-section img {
+    max-width: 320px;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr; /* 🔥 stack layout */
+    gap: 20px;
+  }
+
+  .header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .image-section {
+    padding: 10px;
+  }
+
+  .image-section img {
+    max-width: 100%;
+  }
+
+  .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .title-row h1 {
+    font-size: 20px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr; /* stack info fields */
+  }
+
+  .price {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .product-page {
+    padding: 12px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+}

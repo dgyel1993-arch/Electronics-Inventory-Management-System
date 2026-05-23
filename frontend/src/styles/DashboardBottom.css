@@ -1,0 +1,62 @@
+
+/* TABLES */
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding-bottom: 14px;
+  color: gray;
+  font-size: 14px;
+}
+
+td {
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.red {
+  background: #ffe5e8;
+  color: crimson;
+}
+
+.badge.green {
+  background: #e6ffed;
+  color: green;
+}
+
+.view-all {
+  color: #8b3dff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .middle-grid,
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}

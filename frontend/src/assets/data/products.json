@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Mouse",
+    "category": "Accessories",
+    "price": 25.99,
+    "stock": 2,
+    "status": "Low Stock",
+    "image": "/products/mouse.png"
+  },
+  {
+    "id": 2,
+    "name": "Laptop HP 15\"",
+    "category": "Laptops",
+    "price": 650,
+    "stock": 10,
+    "status": "In Stock",
+    "image": "/products/laptop.png"
+  },
+  {
+    "id": 3,
+    "name": "Mechanical Keyboard",
+    "category": "Accessories",
+    "price": 45.99,
+    "stock": 3,
+    "status": "Low Stock",
+    "image": "/products/keyboard.png"
+  },
+  {
+    "id": 4,
+    "name": "24\" Monitor",
+    "category": "Monitors",
+    "price": 120,
+    "stock": 7,
+    "status": "In Stock",
+    "image": "/products/monitor.png"
+  },
+  {
+    "id": 5,
+    "name": "USB-C Charger",
+    "category": "Accessories",
+    "price": 35,
+    "stock": 15,
+    "status": "In Stock",
+    "image": "/products/charger.png"
+  }
+]
